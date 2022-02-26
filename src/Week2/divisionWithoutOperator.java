@@ -1,44 +1,25 @@
 package Week2;
-
-import java.util.Scanner;
-
 public class divisionWithoutOperator {
-
     public static void main(String[] args) {
-
-        Scanner scan=new Scanner(System.in);
-//sdsds
-        boolean success= false;
-
-        do{
-            System.out.println("Please enter dividend");
-            int num1= scan.nextInt();
-
-            System.out.println("Please enter divisor");
-            int num2= scan.nextInt();
-
-            success = divisionWithoutOperator(num1, num2);
-
-        }while (!success);
+        divisionWOOperatorMethod(100,5);// passing arguments into called method
     }
-    public static boolean divisionWithoutOperator(int num1, int num2) {
+    public static void divisionWOOperatorMethod(int parNum1, int parNum2) {// passing parameters
+         int count = 0;// declaring a variable that in the future will be served as a counter
 
-        if (num1 < num2) {
-            System.out.println("Number 1 should be bigger");
-            return false;
+
+            try {// try block is established to prevent division by 0
+
+               if  (parNum1<=0||parNum2<=0)// condition to state that parNum1 or parNum2 are not equal to zero
+                   throw new ArithmeticException(); // creating exception object
+
+            }catch(ArithmeticException e){// compiler will execute catch block ONLY if try block confirms that one of the passed numbers are equal to zero
+                System.err.println(e+ " Invalid number, start over"); ;// print of an error for user to see info about wrong input
         }
-        if (num2 == 0) {
-            System.out.println("You can not divide by \"0\"");
-            return false;
+
+            while (parNum1 >= parNum2) { // while block is to serve AS LONG AS any parNum1 more or equal parNum2 will get executed
+           parNum1 = parNum1 - parNum2;// subtraction
+            count++;    //counts parNum1-parNum2 executed which acts as a division method where "/" is not used
         }
-        int counter = 0;
-        while (true) {
-            if (num1 < num2) {
-                System.out.println("Result is " + counter + " with reminder " + num1);
-                return true;
-            }
-            num1 = num1 - num2;
-            counter++;
-        }
-    }
+        System.out.println(count);// printing output for user to observe
+         }
 }

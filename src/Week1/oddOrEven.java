@@ -1,19 +1,11 @@
 package Week1;
-
 public class oddOrEven {
-
     public static void main(String[] args) {
-        oddOrEven(15);
+        System.out.println("number is " +oddOrEvenMethod(4));//print statement + argument is being set inside the statement
     }
-    public static void oddOrEven(int number) {
-        if (number % 2 == 0){
-            System.out.println(number+" is EVEN");
-        }else{
-            System.out.println(number+" is ODD");
-        }
+    public  static String oddOrEvenMethod(int numberCheck){//oddOrEven method and passed parameters
+        return (numberCheck%2==0)?"even":"odd";
+
     }
+
 }
-/*
-Numbers ODD & even
-Write a method which can identifies  given number is even or odd
-*/
