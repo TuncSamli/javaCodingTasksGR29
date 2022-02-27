@@ -1,6 +1,26 @@
 package Week2;
 
 public class numbersDivisibleBy3_5_15 {
+    public static void divisibleNumsPrint(int start,int end) {
+        String divisibleBy3 = "";
+        String divisibleBy5 = "";
+        String divisibleBy15 = "";
+        if (start < 1 || end < start) {
+            System.out.println("Incorrect order!");
+            return;
+        }
+        for (int i = start; i <= end; i++) {
+            if (i % 15 == 0) {
+                divisibleBy15 += +i + " ";
+
+            } else if (i % 5 == 0) {
+                divisibleBy5 += i + " ";
+            } else if (i % 3 == 0) {
+                divisibleBy3 += i + " ";
+            }
+        }
+        System.out.println("divisibleBy15 = " + divisibleBy15 + "\ndivisibleBy3 = " + divisibleBy3 + "\ndivisibleBy5 = " + divisibleBy5);
+    }
 
 }
     /*  Write a program that can print the numbers between 1 - 100 that can be divisible by 3, 5, and 15.
