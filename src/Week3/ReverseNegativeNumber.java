@@ -1,6 +1,20 @@
 package Week3;
 
 public class ReverseNegativeNumber {
+    public static int reverseNegativeNum(int number) {
+        int result = 0;
+        if (number < 0){  number = number - number * 2;
+            while (number != 0) {
+                result = result * 10 + number % 10;
+                number /= 10;
+            }
+            result = result - 2 * result;
+            return result;
+        }else{
+            System.out.println("You have entered a Positive number or Zero!");
+            return number;
+        }
+    }
 }
 
 

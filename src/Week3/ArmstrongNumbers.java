@@ -1,22 +1,16 @@
 package Week3;
 
 public class ArmstrongNumbers {
-    public static void main(String []args){
-    armStrongNum(153);
-}
-
-    public static void armStrongNum(int num) {
-        int remainder,sum=0, temp = num;
-        while (temp!= 0) {
-            remainder = temp % 10;
-            sum = sum + (remainder*remainder*remainder);
-            temp /=  10;
+    public static void isArmStrongNumber(int num) {
+        int temp = 0, sum = 0, c = num;
+        while (num > 0) {
+            temp = num % 10;
+            sum = sum + (temp * temp * temp);
+            num /= 10;
         }
-
-        if(sum==num){
-            System.out.println(num + " is an armstrong number");
-        }else{
-            System.out.println(num + " is not an armstrong number");
+        if (sum == c) {
+            System.out.println("Is an Armstrong Number!");
+        } else {System.out.println("Is Not an Armstrong Number!");
         }
     }
 }
