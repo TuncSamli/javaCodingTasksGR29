@@ -12,7 +12,6 @@ public class ArmstrongNumbers {
             sum = sum + (remainder*remainder*remainder);
             temp /=  10;
         }
-
         if(sum==num){
             System.out.println(num + " is an armstrong number");
         }else{
