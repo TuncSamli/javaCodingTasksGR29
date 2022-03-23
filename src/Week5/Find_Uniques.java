@@ -1,7 +1,7 @@
 package Week5;
 
 public class Find_Uniques {
-    public char firstNonRepeatedChar(String str) {
+    public static char firstNonRepeatedChar(String str) {
 
         for (int i = 0; i < str.length(); i++) {
 

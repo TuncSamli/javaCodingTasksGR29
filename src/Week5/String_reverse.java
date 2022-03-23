@@ -1,7 +1,7 @@
 package Week5;
 
 public class String_reverse {
-    public String StrReverse(String str) {
+    public static String StrReverse(String str) {
 
         String reverse="";
 
@@ -11,7 +11,19 @@ public class String_reverse {
         return reverse;
 
     }
+    public static String StrReverse2(String str) {
 
+        String reverse="";
 
+        for(int i=0; i < str.length(); i++) {
+            reverse= str.toCharArray()[i]+reverse;
+        }
+        return reverse;
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(StrReverse2("Olesia"));
+    }
 }
 

@@ -3,7 +3,7 @@ package Week5;
 import java.util.Arrays;
 
 public class Sort_LettersAndNumbers {
-    public String sortLettersAndNumbers(String str) {
+    public static String sortLettersAndNumbers(String str) {
 
         String temp = "";
 
