@@ -8,7 +8,7 @@ public class Array_FindMaximum {
 
     public static int maxValue(int[] n) {
 
-        int max = Integer.MIN_VALUE;
+        int max = Integer.MAX_VALUE;
 
         for (int each : n) {
             if (each > max) {
