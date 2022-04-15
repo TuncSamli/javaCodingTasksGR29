@@ -13,7 +13,7 @@ public class ArrayList_RemoveAhmed {
         ));
         System.out.println(removeAhmed(names));
     }
-
+    //iterator
     public static List<String> removeAhmed(List<String> names) {
 
         Iterator<String> it = names.iterator();
@@ -24,6 +24,13 @@ public class ArrayList_RemoveAhmed {
             }
         }
         return names;
+    }
+
+
+    //lambda
+    public static List<String> removeAhmed2(List<String>array){
+        array.removeIf(p->p.equals("Ahmed"));
+        return array;
     }
 
 

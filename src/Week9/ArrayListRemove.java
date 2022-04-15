@@ -23,4 +23,9 @@ public class ArrayListRemove {
         }
         return numbers;
     }
+
+    public static List<Integer>removeOver100(List<Integer>nums){
+        nums.removeIf(p->p>100);
+        return nums;
+    }
 }
